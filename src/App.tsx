@@ -5,6 +5,7 @@ import { ParticleBackground } from './components/ParticleBackground';
 import { HomePage } from './pages/HomePage';
 import { CategoryPage } from './pages/CategoryPage';
 import { DetailPage } from './pages/DetailPage';
+import { IncubatorPage } from './pages/IncubatorPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 
 export default function App() {
@@ -16,6 +17,7 @@ export default function App() {
         <main className="relative z-10 flex-1">
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/incubator" element={<IncubatorPage />} />
             <Route path="/category/:category" element={<CategoryPage />} />
             <Route path="/microbe/:id" element={<DetailPage />} />
             <Route path="*" element={<NotFoundPage />} />

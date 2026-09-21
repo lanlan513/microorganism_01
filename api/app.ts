@@ -17,6 +17,10 @@ app.get('/', (_req, res) => {
       'GET /api/microbes/category/:category': '按分类获取微生物',
       'GET /api/microbes/:id/related': '获取相关微生物',
       'GET /api/stats': '获取统计数据',
+      'GET /api/petri/catalog': '培养皿可接种标本目录',
+      'POST /api/petri/runs': '创建培养皿（服务端权威模拟，body: {seed, inoculum}）',
+      'GET /api/petri/runs/:id/frames?from=&to=': '取逐帧权威二进制',
+      'POST /api/petri/runs/:id/verify': '重放并逐格复核生态指纹',
     },
   });
 });
